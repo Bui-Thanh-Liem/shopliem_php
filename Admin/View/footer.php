@@ -1,55 +1,81 @@
-<footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6>THÔNG TIN</h6>
-                    <p class="text-justify">
-                        Công ty Cổ phần Đầu tư Thế Giới Di Động (MWG) là nhà bán lẻ số 1 Việt Nam về doanh thu và lợi
-                        nhuận, với mạng lưới hơn 3.400 cửa hàng trên toàn quốc. MWG vận hành các chuỗi bán lẻ
-                        thegioididong.com, Điện Máy Xanh, Bách Hoá Xanh. Ngoài ra, MWG đã mở rộng ra thị trường nước
-                        ngoài với chuỗi bán lẻ điện thoại và điện máy tại Campuchia.
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <h6>SẢN PHẨM</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/category/c-language/">Giày</a></li>
-                        <li><a href="http://scanfcode.com/category/front-end-development/">Túi Xách</a></li>
-                      
-
-                    </ul>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <h6>THÔNG TIN NHANH</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/about/">Gọi mua hàng: 1800.1060</a></li>
-                        <li><a href="http://scanfcode.com/contact/">Gọi khiếu nại: 1800.1062</a></li>
-                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Gọi bảo hành: 1800.1064</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Kỹ thuật: 1800.1763</a></li>
-
-                    </ul>
-                </div>
-            </div>
-            <hr>
+<div class="container-fluid mt-5">
+    <div class="row justify-content-between align-items-center">
+        <img class="col w-100" src="../assets/imgs/footerImg1.webp" alt="">
+        <img class="col w-100" src="../assets/imgs/footerImg2.webp" alt="">
+        <img class="col w-100" src="../assets/imgs/footerImg3.webp" alt="">
+        <img class="col w-100" src="../assets/imgs/footerImg4.webp" alt="">
+        <img class="col w-100" src="../assets/imgs/footerImg5.webp" alt="">
+        <img class="col w-100" src="../assets/imgs/footerImg6.webp" alt="">
+    </div>
+    <div class="d-flex justify-content-between px-5 mt-2">
+        <div>
+            <h5 class="fw-bold">BTL Shop</h5>
+            <ul class="m-0 p-0">
+                <li>Giới thiệu</li>
+                <li>Kiểm tra đơn hàng</li>
+                <li>Cách chọn size</li>
+                <li>Thông tin liên hệ</li>
+                <li>Câu hỏi thường gặp</li>
+                <li>Hướng dẫn bảo quản</li>
+            </ul>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-                        <a href="#">Scanfcode</a>.
-                    </p>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
+        <div>
+            <h5 class="fw-bold">Chính Sách</h5>
+            <ul class="m-0 p-0">
+                <li>Hướng dẫn mua hàng</li>
+                <li>Khách hàng thân thiết</li>
+                <li>Chính sách đổi hàng</li>
+                <li>Chính sách bảo mật</li>
+                <li>Đối tác sản xuất</li>
+                <li>Bán hàng liên kết (Affiliate)</li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="fw-bold">Kết Nối Với BTL Shop</h5>
+            <ul class="list-unstyled d-flex justify-content-between px-3">
+                <li>
+                    <a href="" class="text-dark text-decoration-none">
+                        <i class="fs-4 fw-bold bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-dark text-decoration-none">
+                        <i class="fs-4 fw-bold bi bi-google"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-dark text-decoration-none">
+                        <i class="fs-4 fw-bold bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-dark text-decoration-none">
+                        <i class="fs-4 fw-bold bi bi-tiktok"></i>
+                    </a>
+                </li>
+            </ul>
+            <div style="width: 180px;">
+                <img class="w-100" src="assets/imgs/footerImg7.png" alt="">
             </div>
         </div>
-    </footer>
+        <div>
+            <h5 class="fw-bold">Thông Tin Cửa Hàng</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <i class="bi bi-house-fill"></i> Số 12 Trịnh Đình Thảo, Phường Hòa Thạnh, Q.Tân Phú, TP.HCM
+                </li>
+                <li>
+                    <i class="bi bi-house-fill"></i> Số 312 Lê Đức Thọ, Phường 16, Q.Gò Vấp, TP.HCM
+                </li>
+                <li>
+                    <i class="bi bi-telephone-fill"></i> 0375255073
+                </li>
+                <li>
+                    <i class="bi bi-envelope-at-fill"></i> buithanhliem5073@gmail.com
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <p class="text-center">Copyright © 2024 BTL Shop.</p>
+</div>

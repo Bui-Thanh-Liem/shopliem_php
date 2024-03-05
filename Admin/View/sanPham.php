@@ -31,7 +31,7 @@
           <td><?php echo $set['luotXem']; ?></td>
           <td><?php echo $set['ngayLap']; ?></td>
           <td><?php echo $set['mieuTa_sanPham']; ?></td>
-          <td><a href="index.php?action=hanghoa&act=update_hanghoa&id=<?php echo $set['id_sanPham']; ?>">Cập nhật</a></td>
+          <td><a href="index.php?action=sanPham&act=update_sanPham&id=<?php echo $set['id_sanPham']; ?>">Cập nhật</a></td>
           <td><a href="">Xóa</a></td>
         </tr>
       <?php
