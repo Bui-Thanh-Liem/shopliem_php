@@ -51,7 +51,7 @@
       $usrs = $user->getUser();
       while ($u = $usrs->fetch()) :
       ?>
-        <tr class="<?php echo $u['block'] == 1 ? 'bg-danger text-white' : '' ?>">
+        <tr class="">
           <th scope="row"><?php echo $u['id_khachHang'] ?></th>
           <td><?php echo $u['tenDangNhap'] ?></td>
           <td><?php echo $u['email'] ?></td>
