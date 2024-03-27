@@ -7,11 +7,18 @@ $sp = new SanPham();
 $msp = $sp->layMotSanPhamTheoId($id);
 ?>
 <div class="container mt-5">
-    <div class="row">
+    <div>
+        <?php
+        include_once "./view/header.php";
+        include_once "./view/nav.php";
+        ?>
+    </div>
+    <div class="mt-5 row">
         <div class="col">
             <img class="w-100" src="assets/imgs/<?php echo $msp['hinh_sanPham'] ?>" alt="">
         </div>
-        <div class="col">
+        <form action="index.php?action=cart&act=chiTietSanPham_action" method="post" class="col">
+            <input hidden type="text" name="idSanPham" value="<?php echo $msp['id_sanPham'] ?>">
             <p class="fs-3 fw-bold"><?php echo $msp['ten_sanPham'] ?></p>
             <?php
             $giaThuc = 0;
@@ -30,32 +37,32 @@ $msp = $sp->layMotSanPhamTheoId($id);
 
             <div>
                 <div>
-                    <input hidden name="size" checked id="s" type="radio">
+                    <input value="s" hidden name="size" checked id="s" type="radio">
                     <label class="px-2 fw-bold" for="s">S</label>
-                    <input hidden name="size" id="m" type="radio">
+                    <input value="m" hidden name="size" id="m" type="radio">
                     <label class="px-2 fw-bold" for="m">M</label>
-                    <input hidden name="size" id="l" type="radio">
+                    <input value="l" hidden name="size" id="l" type="radio">
                     <label class="px-2 fw-bold" for="l">L</label>
-                    <input hidden name="size" id="xl" type="radio">
+                    <input value="xl" hidden name="size" id="xl" type="radio">
                     <label class="px-2 fw-bold" for="xl">XL</label>
-                    <input hidden name="size" id="xxl" type="radio">
+                    <input value="xxl" hidden name="size" id="xxl" type="radio">
                     <label class="px-2 fw-bold" for="xxl">XXL</label>
                 </div>
             </div>
 
-            <div class="mt-3 d-flex justify-content-between align-items-center w-25 border border-1 h-0">
-                <button onclick="soLuong.value == 1 ? soLuong.value = 1 : soLuong.value--" class="fs-3 m-0" style="line-height: 1;">-</button>
-                <input value="1" name="soLuong" style="width: 40px; height: 24px;" class="bg-info text-danger fw-bold text-center" />
-                <button onclick="soLuong.value == 99 ? soLuong.value = 99 : soLuong.value++" class="fs-3 m-0" style="line-height: 1;">+</button>
+            <div class="mt-3 d-flex justify-content-between align-items-center w-25 rounded rounded-1 border border-1 h-0">
+                <div onclick="soLuong.value == 1 ? soLuong.value = 1 : soLuong.value--" class="btn btn-warning" style="line-height: 1;">-</div>
+                <input max="<?php echo $msp['soLuong']?>" value="1" name="soLuong" style="width: 40px; height: 24px;" class="bg-info text-danger fw-bold text-center" />
+                <div onclick="soLuong.value == <?php echo $msp['soLuong']?> ? soLuong.value = <?php echo $msp['soLuong']?> : soLuong.value++" class="btn btn-warning" style="line-height: 1;">+</div>
             </div>
 
             <div class="mt-4">
-                <button class="btn btn-info btn-sm">Mua Ngay</button>
-                <button class="btn btn-info btn-sm">Thêm vào giỏ hàng</button>
+                <button type="submit" name="submit" class="btn btn-info btn-sm">Mua Ngay</button>
+                <button type="submit" class="btn btn-info btn-sm">Thêm vào giỏ hàng</button>
             </div>
             <p class="fw-bold mt-5 mb-1">Miêu tả:</p>
             <p><?php echo $msp['mieuTa_sanPham'] ?></p>
-        </div>
+        </form>
     </div>
 </div>
 

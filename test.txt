@@ -1,0 +1,8 @@
+CREATE TABLE `chi_tiet_bill` (
+  `id_bill` int(10) NOT NULL,
+  `id_sanPham` int(10) NOT NULL,
+  `soLuong` int(10) NOT NULL,
+  `mauSac` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `size` varchar(10) NOT NULL,
+  `thanhTien` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

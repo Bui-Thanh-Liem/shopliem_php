@@ -25,7 +25,7 @@ class User
         $db = new Connect();
         $query = "SELECT kh.tenDangNhap
                     FROM khach_hang kh
-                    WHERE kh.tenDangNhap = '$tenDangNhap' AND kh.matKhau = '$matKhau'";
+                    WHERE kh.tenDangNhap = '$tenDangNhap' AND kh.block != 1 AND kh.matKhau = '$matKhau'";
         $result = $db->getInstance($query);
         return $result;
     }
@@ -33,7 +33,7 @@ class User
     function logUser($tenDangNhap)
     {
         $db = new Connect();
-        $query = "SELECT kh.tenDangNhap, kh.email, kh.hoVaTen, kh.sdt, kh.diaChi
+        $query = "SELECT kh.tenDangNhap, kh.email, kh.hoVaTen, kh.sdt, kh.diaChi, kh.id_khachHang
                     FROM khach_hang kh
                     WHERE kh.tenDangNhap = '$tenDangNhap'";
         $result = $db->getInstance($query);

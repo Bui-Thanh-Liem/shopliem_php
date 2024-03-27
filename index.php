@@ -2,9 +2,13 @@
 <html lang="en">
 <?php
 session_start();
-include "./modal/Connect.php";
-include "./modal/SanPham.php";
-include "./modal/User.php";
+// unset($_SESSION['cart']);
+include "./model/Connect.php";
+include "./model/SanPham.php";
+include "./model/User.php";
+include "./model/Cart.php";
+include "./model/Bill.php";
+include "./model/Nav.php";
 ?>
 
 <head>
@@ -13,6 +17,7 @@ include "./modal/User.php";
     <title>BTL Shop</title>
     <link rel="shortcut icon" href="./assets/imgs/avatar.png" type="image/x-icon">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./styleGlobal.css">
 </head>

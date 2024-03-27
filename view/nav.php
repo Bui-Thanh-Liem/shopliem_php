@@ -1,12 +1,12 @@
 <div>
     <ul class="list-unstyled d-flex justify-content-center align-items-center">
-        <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=1">Áo Khoát</a></li>
-        <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=2">Áo Sơmi</a></li>
-        <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=3">Áo Thun</a></li>
-        <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=4">Quần Dài</a></li>
-        <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=5">Quần Ngắn</a></li>
-        <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=all">Tất Cả</a></li>
-        <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=sale">Giảm Giá</a></li>
+        <?php
+        $nav = new Nav();
+        $navs = $nav->getAllNav();
+        while ($nav = $navs->fetch()) :
+        ?>
+            <li style="margin-right: 34px;" class="fw-bold toTop"><a class="text-decoration-none text-dark" href="index.php?action=sanPham&idLoaiSanPham=<?php echo $nav['key_nav'] ?>"><?php echo $nav['name_nav'] ?></a></li>
+        <?php endwhile; ?>
     </ul>
 </div>
 

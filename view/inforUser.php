@@ -18,13 +18,15 @@ $persion = $user->logUser($_SESSION['tenDangNhap']);
             <p>Email: </p>
             <p>Số Điện Thoại: </p>
             <p>Địa Chỉ: </p>
-            <a href="index.php?action=login&act=logout">Đăng Xuất</a>
+            <a class="btn btn-success btn-sm" href="index.php?action=bill&act=bills">Đơn hàng của bạn</a>
         </div>
         <div class="col">
             <p><?php echo $persion['hoVaTen'] ?></p>
             <p><?php echo $persion['email'] ?></p>
             <p><?php echo $persion['sdt'] ?></p>
             <p><?php echo $persion['diaChi'] ?></p>
+            <a class="btn btn-danger btn-sm" href="index.php?action=login&act=logout">Đăng Xuất</a>
+
         </div>
     </div>
 </div>

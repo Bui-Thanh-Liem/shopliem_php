@@ -15,7 +15,7 @@
         <a href="" class="text-dark" style="margin-right: 24px;">
             <i class="fs-3 bi bi-search"></i>
         </a>
-        <a href="" class="text-dark" style="margin-right: 24px;">
+        <a href="index.php?action=cart&act=cart" class="text-dark" style="margin-right: 24px;">
             <i class="fs-3 bi bi-bag-dash-fill"></i>
         </a>
     </div>

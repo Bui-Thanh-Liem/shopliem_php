@@ -25,12 +25,15 @@ spl_autoload_register();
     }
     ?>
 
-    <div class="container">
+    <div class="px-5">
         <div class="">
             <?php
             $ctrl = "login";
-            if (isset($_GET['action']))
-                $ctrl = $_GET['action'];
+            if (isset($_SESSION['admin'])) {
+                $ctrl = "user";
+                if (isset($_GET['action']))
+                    $ctrl = $_GET['action'];
+            }
             include 'Controller/' . $ctrl . '.php';
             ?>
         </div>
@@ -44,6 +47,7 @@ spl_autoload_register();
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

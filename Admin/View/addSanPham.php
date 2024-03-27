@@ -4,6 +4,7 @@ if (isset($_GET['id'])) {
   $hh = new SanPham();
   $kq = $hh->getSanPhamTheoId($mahh);
   $tenhh = $kq['tenhh'];
+  $hinh = $kq['hinh'];
   $maloai = $kq['maloai'];
   $giam_gia = $kq['giam_gia'];
   $slx = $kq['soluotxem'];
@@ -23,7 +24,7 @@ if (isset($_GET['action'])) {
 }
 ?>
 
-<div class="">
+<div class="container">
   <div>
     <p class="fw-bold fs-3 text-center mt-5">Thêm Sản Phẩm Mới</p>
   </div>
@@ -35,7 +36,15 @@ if (isset($_GET['action'])) {
       </tr>
       <tr>
         <td>Tên hàng</td>
-        <td><input type="text" class="form-control" name="tenhh" value="<?php if (isset($tenhh)) echo $tenhh; ?>" maxlength="100px"></td>
+        <td>
+          <input type="text" class="form-control" name="tenhh" value="<?php if (isset($tenhh)) echo $tenhh; ?>" maxlength="100px">
+        </td>
+      </tr>
+      <tr>
+        <td>Url hình</td>
+        <td>
+          <input type="file" name="hinh" value="<?php if (isset($hinh)) echo $hinh; ?>">
+        </td>
       </tr>
 
       <tr>

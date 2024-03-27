@@ -4,18 +4,20 @@ if (isset($_GET['id'])) {
   $hh = new SanPham();
   $kq = $hh->getSanPhamTheoId($mahh);
   $tenhh = $kq['ten_sanPham'];
+  $hinh = $kq['hinh_sanPham'];
   $maloai = $kq['id_loaiSanPham'];
   $gia_sanPham = $kq['gia_sanPham'];
   $giam_gia = $kq['phanTramGiaGia_sanPham'];
   $slx = $kq['luotXem'];
   $ngaylap = $kq['ngayLap'];
+  $soLuong = $kq['soLuong'];
   $mota = $kq['mieuTa_sanPham'];
 }
 ?>
 
-<div class="">
+<div class="container">
   <div>
-    <p class="fw-bold fs-3 text-center mt-5">Thêm Sản Phẩm Mới</p>
+    <p class="fw-bold fs-3 text-center mt-5">Cập Nhật Sản Phẩm</p>
   </div>
   <form action="index.php?action=sanPham&act=update_sanPham_action" method="post" enctype="multipart/form-data">
     <table class="table" style="border: 0px;">
@@ -26,6 +28,16 @@ if (isset($_GET['id'])) {
       <tr>
         <td>Tên hàng</td>
         <td><input type="text" class="form-control" name="tenhh" value="<?php if (isset($tenhh)) echo $tenhh; ?>" maxlength="100px"></td>
+      </tr>
+
+      <tr>
+        <td>Url hình</td>
+        <td>
+          <input type="file" class="" name="hinh" value="<?php if (isset($hinh)) echo $hinh;?>" maxlength="100px">
+          <span style="width: 100px;" class="d-inline-block">
+            <img class="w-100" src="assets/imgs/<?php if (isset($hinh)) echo $hinh; ?>" alt="">
+          </span>
+        </td>
       </tr>
 
       <tr>
@@ -66,6 +78,11 @@ if (isset($_GET['id'])) {
       <tr>
         <td>Ngày lập</td>
         <td><input type="text" class="form-control" value="<?php if (isset($ngaylap)) echo $ngaylap; ?>" name="ngaylap">
+        </td>
+      </tr>
+      <tr>
+        <td>Số lượng</td>
+        <td><input type="number" class="form-control" value="<?php if (isset($soLuong)) echo $soLuong; ?>" name="soLuong">
         </td>
       </tr>
       <tr>
